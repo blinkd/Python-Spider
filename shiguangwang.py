@@ -80,7 +80,7 @@ def movies_from_url(url):
     page = get(url,filename)
     e = pq(page)
     items = e('#asyncRatingRegion').children()
-    print('item',items)
+    # print('item',items)
     movies = [movie_from_div(i) for i in items]
     save_cover(movies)
     return movies
